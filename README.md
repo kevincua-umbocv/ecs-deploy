@@ -16,8 +16,9 @@ Usage
 -----
 
     One of the following is required:
-        -n | --service-name     Name of service to deploy
-        -d | --task-definition  Name of task definition to deploy
+        -n | --service-name           Name of service to deploy
+        -x | --service-name-prefix    Name prefix of service to deploy
+        -d | --task-definition        Name of task definition to deploy
 
     Required arguments:
         -k | --aws-access-key         AWS Access Key ID. May also be set as environment variable AWS_ACCESS_KEY_ID
