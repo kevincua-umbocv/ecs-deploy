@@ -335,7 +335,7 @@ function getCurrentTaskDefinition() {
         # Get service from service prefix
         SERVICE=$($AWS_ECS list-services --cluster $CLUSTER --query 'serviceArns[?contains(@, `'${SERVICE_PREFIX}'`)]' | jq -r .[0])
       fi
-      
+
       # Get current task definition arn from service
       TASK_DEFINITION_ARN=`$AWS_ECS describe-services --services $SERVICE --cluster $CLUSTER | jq -r .services[0].taskDefinition`
       TASK_DEFINITION=`$AWS_ECS describe-task-definition --task-def $TASK_DEFINITION_ARN`
